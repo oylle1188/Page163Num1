@@ -48,6 +48,9 @@
             lstBillingInformation.Items.Add(String.Format(fmtStr, strItem3, FormatCurrency(dblSprayerCostFull), "Full day Rental"))
         ElseIf TextBox1.Text = "3" And TextBox2.Text.ToUpper = "H" Then
             lstBillingInformation.Items.Add(String.Format(fmtStr, strItem3, FormatCurrency(dblSprayerCostHalf), "Half day Rental"))
+        Else
+            MessageBox.Show("Please enter 1, 2, or 3 in the select item textbox")
+            MessageBox.Show("Please enter H or F in the duration textbox")
         End If
 
     End Sub
